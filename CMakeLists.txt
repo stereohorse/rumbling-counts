@@ -44,7 +44,8 @@ file(COPY ${allegro5_SOURCE_DIR}/addons/primitives/allegro5/allegro_primitives.h
 
 # -- Executable
 
-add_executable(RumblingCounts src/main.c)
+FILE(GLOB_RECURSE APP_SOURCES src/*.c)
+add_executable(RumblingCounts ${APP_SOURCES})
 target_include_directories(RumblingCounts PUBLIC ${allegro5_SOURCE_DIR}/include)
 target_include_directories(RumblingCounts PUBLIC ${allegro5_BINARY_DIR}/include)
 target_include_directories(RumblingCounts PRIVATE src include)

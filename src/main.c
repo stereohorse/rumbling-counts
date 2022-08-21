@@ -5,6 +5,8 @@
 #include <allegro5/allegro_image.h>
 #include <allegro5/allegro_primitives.h>
 
+#include <screens.h>
+
 void must_init(bool test, const char *description) {
   if (test) {
     return;
@@ -15,9 +17,9 @@ void must_init(bool test, const char *description) {
 }
 
 int main() {
-  must_init(al_init(), "allegro");
+  must_init(al_init(), "engine");
   must_init(al_install_keyboard(), "keyboard");
-  must_init(al_init_image_addon(), "image addon");
+  must_init(al_init_image_addon(), "image engine");
 
   ALLEGRO_TIMER *timer = al_create_timer(1.0 / 60.0);
   must_init(timer, "timer");
@@ -31,6 +33,8 @@ int main() {
   al_register_event_source(queue, al_get_keyboard_event_source());
   al_register_event_source(queue, al_get_display_event_source(disp));
   al_register_event_source(queue, al_get_timer_event_source(timer));
+
+  draw_screen_fn* draw_screen = &draw_game_screen;
 
   bool done = false;
   bool redraw = true;
@@ -57,6 +61,8 @@ int main() {
     if (redraw && al_is_event_queue_empty(queue)) {
       al_clear_to_color(al_map_rgb(0, 0, 0));
       al_flip_display();
+      
+      draw_screen();
 
       redraw = false;
     }
