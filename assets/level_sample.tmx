@@ -1,0 +1,417 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.9" tiledversion="1.9.1" orientation="isometric" renderorder="right-down" width="8" height="8" tilewidth="256" tileheight="148" infinite="0" nextlayerid="5" nextobjectid="1">
+ <tileset firstgid="1" name="base" tilewidth="256" tileheight="512" tilecount="64" columns="0">
+  <grid orientation="orthogonal" width="1" height="1"/>
+  <tile id="0">
+   <image width="256" height="512" source="base/treePineLarge_E.png"/>
+  </tile>
+  <tile id="1">
+   <image width="256" height="512" source="base/treePineSmall_W.png"/>
+  </tile>
+  <tile id="2">
+   <image width="256" height="512" source="base/treePineSmall_S.png"/>
+  </tile>
+  <tile id="3">
+   <image width="256" height="512" source="base/treePineSmall_N.png"/>
+  </tile>
+  <tile id="4">
+   <image width="256" height="512" source="base/treePineSmall_E.png"/>
+  </tile>
+  <tile id="5">
+   <image width="256" height="512" source="base/treePineLarge_W.png"/>
+  </tile>
+  <tile id="6">
+   <image width="256" height="512" source="base/treePineLarge_S.png"/>
+  </tile>
+  <tile id="7">
+   <image width="256" height="512" source="base/treePineLarge_N.png"/>
+  </tile>
+  <tile id="8">
+   <image width="256" height="512" source="base/treeDeadSmall_W.png"/>
+  </tile>
+  <tile id="9">
+   <image width="256" height="512" source="base/treeDeadSmall_S.png"/>
+  </tile>
+  <tile id="10">
+   <image width="256" height="512" source="base/treeDeadSmall_N.png"/>
+  </tile>
+  <tile id="11">
+   <image width="256" height="512" source="base/treeDeadSmall_E.png"/>
+  </tile>
+  <tile id="12">
+   <image width="256" height="512" source="base/treeDeadLarge_W.png"/>
+  </tile>
+  <tile id="13">
+   <image width="256" height="512" source="base/treeDeadLarge_S.png"/>
+  </tile>
+  <tile id="14">
+   <image width="256" height="512" source="base/treeDeadLarge_N.png"/>
+  </tile>
+  <tile id="15">
+   <image width="256" height="512" source="base/treeDeadLarge_E.png"/>
+  </tile>
+  <tile id="16">
+   <image width="256" height="512" source="base/grassTreeStumpAxe_W.png"/>
+  </tile>
+  <tile id="17">
+   <image width="256" height="512" source="base/grassTreeStumpAxe_S.png"/>
+  </tile>
+  <tile id="18">
+   <image width="256" height="512" source="base/grassTreeStumpAxe_N.png"/>
+  </tile>
+  <tile id="19">
+   <image width="256" height="512" source="base/grassTreeStumpAxe_E.png"/>
+  </tile>
+  <tile id="20">
+   <image width="256" height="512" source="base/grassTreeStump_W.png"/>
+  </tile>
+  <tile id="21">
+   <image width="256" height="512" source="base/grassTreeStump_S.png"/>
+  </tile>
+  <tile id="22">
+   <image width="256" height="512" source="base/grassTreeStump_N.png"/>
+  </tile>
+  <tile id="23">
+   <image width="256" height="512" source="base/grassTreeStump_E.png"/>
+  </tile>
+  <tile id="24">
+   <image width="256" height="512" source="base/grassStoneSmall_W.png"/>
+  </tile>
+  <tile id="25">
+   <image width="256" height="512" source="base/grassStoneSmall_S.png"/>
+  </tile>
+  <tile id="26">
+   <image width="256" height="512" source="base/grassStoneSmall_N.png"/>
+  </tile>
+  <tile id="27">
+   <image width="256" height="512" source="base/grassStoneSmall_E.png"/>
+  </tile>
+  <tile id="28">
+   <image width="256" height="512" source="base/grassStoneLarge_W.png"/>
+  </tile>
+  <tile id="29">
+   <image width="256" height="512" source="base/grassStoneLarge_S.png"/>
+  </tile>
+  <tile id="30">
+   <image width="256" height="512" source="base/grassStoneLarge_N.png"/>
+  </tile>
+  <tile id="31">
+   <image width="256" height="512" source="base/grassStoneLarge_E.png"/>
+  </tile>
+  <tile id="32">
+   <image width="256" height="512" source="base/grassPathStraight_W.png"/>
+  </tile>
+  <tile id="33">
+   <image width="256" height="512" source="base/grassPathStraight_S.png"/>
+  </tile>
+  <tile id="34">
+   <image width="256" height="512" source="base/grassPathStraight_N.png"/>
+  </tile>
+  <tile id="35">
+   <image width="256" height="512" source="base/grassPathStraight_E.png"/>
+  </tile>
+  <tile id="36">
+   <image width="256" height="512" source="base/grassPathEnd_W.png"/>
+  </tile>
+  <tile id="37">
+   <image width="256" height="512" source="base/grassPathEnd_S.png"/>
+  </tile>
+  <tile id="38">
+   <image width="256" height="512" source="base/grassPathEnd_N.png"/>
+  </tile>
+  <tile id="39">
+   <image width="256" height="512" source="base/grassPathEnd_E.png"/>
+  </tile>
+  <tile id="40">
+   <image width="256" height="512" source="base/grassPathCrossing_W.png"/>
+  </tile>
+  <tile id="41">
+   <image width="256" height="512" source="base/grassPathCrossing_S.png"/>
+  </tile>
+  <tile id="42">
+   <image width="256" height="512" source="base/grassPathCrossing_N.png"/>
+  </tile>
+  <tile id="43">
+   <image width="256" height="512" source="base/grassPathCrossing_E.png"/>
+  </tile>
+  <tile id="44">
+   <image width="256" height="512" source="base/grassPathCornerPlace_W.png"/>
+  </tile>
+  <tile id="45">
+   <image width="256" height="512" source="base/grassPathCornerPlace_S.png"/>
+  </tile>
+  <tile id="46">
+   <image width="256" height="512" source="base/grassPathCornerPlace_N.png"/>
+  </tile>
+  <tile id="47">
+   <image width="256" height="512" source="base/grassPathCornerPlace_E.png"/>
+  </tile>
+  <tile id="48">
+   <image width="256" height="512" source="base/grassPathCorner_W.png"/>
+  </tile>
+  <tile id="49">
+   <image width="256" height="512" source="base/grassPathCorner_S.png"/>
+  </tile>
+  <tile id="50">
+   <image width="256" height="512" source="base/grassPathCorner_N.png"/>
+  </tile>
+  <tile id="51">
+   <image width="256" height="512" source="base/grassPathCorner_E.png"/>
+  </tile>
+  <tile id="52">
+   <image width="256" height="512" source="base/grassHillHigh_W.png"/>
+  </tile>
+  <tile id="53">
+   <image width="256" height="512" source="base/grassHillHigh_S.png"/>
+  </tile>
+  <tile id="54">
+   <image width="256" height="512" source="base/grassHillHigh_N.png"/>
+  </tile>
+  <tile id="55">
+   <image width="256" height="512" source="base/grassHillHigh_E.png"/>
+  </tile>
+  <tile id="56">
+   <image width="256" height="512" source="base/grassHill_S.png"/>
+  </tile>
+  <tile id="57">
+   <image width="256" height="512" source="base/grassHill_N.png"/>
+  </tile>
+  <tile id="58">
+   <image width="256" height="512" source="base/grassHill_E.png"/>
+  </tile>
+  <tile id="59">
+   <image width="256" height="512" source="base/grass_W.png"/>
+  </tile>
+  <tile id="60">
+   <image width="256" height="512" source="base/grass_S.png"/>
+  </tile>
+  <tile id="61">
+   <image width="256" height="512" source="base/grass_N.png"/>
+  </tile>
+  <tile id="62">
+   <image width="256" height="512" source="base/grass_E.png"/>
+  </tile>
+  <tile id="63">
+   <image width="256" height="512" source="base/grassHill_W.png"/>
+  </tile>
+ </tileset>
+ <tileset firstgid="65" name="farm" tilewidth="256" tileheight="512" tilecount="60" columns="0">
+  <grid orientation="orthogonal" width="1" height="1"/>
+  <tile id="0">
+   <image width="256" height="512" source="farm/fenceLowBroken_S.png"/>
+  </tile>
+  <tile id="1">
+   <image width="256" height="512" source="farm/woodWallDiagional_S.png"/>
+  </tile>
+  <tile id="2">
+   <image width="256" height="512" source="farm/woodWallSupport_N.png"/>
+  </tile>
+  <tile id="3">
+   <image width="256" height="512" source="farm/woodWallEmptyOpen_W.png"/>
+  </tile>
+  <tile id="4">
+   <image width="256" height="512" source="farm/planksSideVertical_W.png"/>
+  </tile>
+  <tile id="5">
+   <image width="256" height="512" source="farm/woodWallDoorOpen_N.png"/>
+  </tile>
+  <tile id="6">
+   <image width="256" height="512" source="farm/woodWallGateClosed_W.png"/>
+  </tile>
+  <tile id="7">
+   <image width="256" height="512" source="farm/woodWallDiagional_E.png"/>
+  </tile>
+  <tile id="8">
+   <image width="256" height="512" source="farm/fenceLowBroken_E.png"/>
+  </tile>
+  <tile id="9">
+   <image width="256" height="512" source="farm/planksCornerLeft_W.png"/>
+  </tile>
+  <tile id="10">
+   <image width="256" height="512" source="farm/woodWallCorner_E.png"/>
+  </tile>
+  <tile id="11">
+   <image width="256" height="512" source="farm/hayBales_N.png"/>
+  </tile>
+  <tile id="12">
+   <image width="256" height="512" source="farm/woodWallWindowGlass_W.png"/>
+  </tile>
+  <tile id="13">
+   <image width="256" height="512" source="farm/planksCornerRight_W.png"/>
+  </tile>
+  <tile id="14">
+   <image width="256" height="512" source="farm/woodWallEmpty_N.png"/>
+  </tile>
+  <tile id="15">
+   <image width="256" height="512" source="farm/ladderStandBroken_N.png"/>
+  </tile>
+  <tile id="16">
+   <image width="256" height="512" source="farm/roofSingle_E.png"/>
+  </tile>
+  <tile id="17">
+   <image width="256" height="512" source="farm/planks_N.png"/>
+  </tile>
+  <tile id="18">
+   <image width="256" height="512" source="farm/sack_N.png"/>
+  </tile>
+  <tile id="19">
+   <image width="256" height="512" source="farm/roofSingle_S.png"/>
+  </tile>
+  <tile id="20">
+   <image width="256" height="512" source="farm/fenceHigh_W.png"/>
+  </tile>
+  <tile id="21">
+   <image width="256" height="512" source="farm/sacksCrate_N.png"/>
+  </tile>
+  <tile id="22">
+   <image width="256" height="512" source="farm/planksHighSlope_N.png"/>
+  </tile>
+  <tile id="23">
+   <image width="256" height="512" source="farm/hayBalesStacked_N.png"/>
+  </tile>
+  <tile id="24">
+   <image width="256" height="512" source="farm/corn_W.png"/>
+  </tile>
+  <tile id="25">
+   <image width="256" height="512" source="farm/woodWallCorner_S.png"/>
+  </tile>
+  <tile id="26">
+   <image width="256" height="512" source="farm/planksHighOld_N.png"/>
+  </tile>
+  <tile id="27">
+   <image width="256" height="512" source="farm/planksCornerLeft_E.png"/>
+  </tile>
+  <tile id="28">
+   <image width="256" height="512" source="farm/woodWallCorner_W.png"/>
+  </tile>
+  <tile id="29">
+   <image width="256" height="512" source="farm/corn_S.png"/>
+  </tile>
+  <tile id="30">
+   <image width="256" height="512" source="farm/planksCornerRight_E.png"/>
+  </tile>
+  <tile id="31">
+   <image width="256" height="512" source="farm/woodWallWindowGlass_E.png"/>
+  </tile>
+  <tile id="32">
+   <image width="256" height="512" source="farm/fenceHigh_S.png"/>
+  </tile>
+  <tile id="33">
+   <image width="256" height="512" source="farm/roofSingle_W.png"/>
+  </tile>
+  <tile id="34">
+   <image width="256" height="512" source="farm/fenceHigh_E.png"/>
+  </tile>
+  <tile id="35">
+   <image width="256" height="512" source="farm/woodWallHoleCross_N.png"/>
+  </tile>
+  <tile id="36">
+   <image width="256" height="512" source="farm/planksCornerRight_S.png"/>
+  </tile>
+  <tile id="37">
+   <image width="256" height="512" source="farm/woodWallWindowGlass_S.png"/>
+  </tile>
+  <tile id="38">
+   <image width="256" height="512" source="farm/corn_E.png"/>
+  </tile>
+  <tile id="39">
+   <image width="256" height="512" source="farm/planksCornerLeft_S.png"/>
+  </tile>
+  <tile id="40">
+   <image width="256" height="512" source="farm/woodWallGateClosed_S.png"/>
+  </tile>
+  <tile id="41">
+   <image width="256" height="512" source="farm/roof_N.png"/>
+  </tile>
+  <tile id="42">
+   <image width="256" height="512" source="farm/woodWallHole_N.png"/>
+  </tile>
+  <tile id="43">
+   <image width="256" height="512" source="farm/woodWallEmptyOpen_E.png"/>
+  </tile>
+  <tile id="44">
+   <image width="256" height="512" source="farm/planksSideVertical_E.png"/>
+  </tile>
+  <tile id="45">
+   <image width="256" height="512" source="farm/planksSideVertical_S.png"/>
+  </tile>
+  <tile id="46">
+   <image width="256" height="512" source="farm/woodWallEmptyOpen_S.png"/>
+  </tile>
+  <tile id="47">
+   <image width="256" height="512" source="farm/woodWallGateClosed_E.png"/>
+  </tile>
+  <tile id="48">
+   <image width="256" height="512" source="farm/woodWallEmptyDiagonal_N.png"/>
+  </tile>
+  <tile id="49">
+   <image width="256" height="512" source="farm/woodWallDiagional_W.png"/>
+  </tile>
+  <tile id="50">
+   <image width="256" height="512" source="farm/fenceLowBroken_W.png"/>
+  </tile>
+  <tile id="51">
+   <image width="256" height="512" source="farm/woodWallGateOpen_E.png"/>
+  </tile>
+  <tile id="52">
+   <image width="256" height="512" source="farm/woodWallDoorway_N.png"/>
+  </tile>
+  <tile id="53">
+   <image width="256" height="512" source="farm/woodWallEmptyCross_N.png"/>
+  </tile>
+  <tile id="54">
+   <image width="256" height="512" source="farm/planksHole_S.png"/>
+  </tile>
+  <tile id="55">
+   <image width="256" height="512" source="farm/roofInnerCorner_W.png"/>
+  </tile>
+  <tile id="56">
+   <image width="256" height="512" source="farm/woodWallRoofLeft_W.png"/>
+  </tile>
+  <tile id="57">
+   <image width="256" height="512" source="farm/chimneyBase_E.png"/>
+  </tile>
+  <tile id="58">
+   <image width="256" height="512" source="farm/chimneyBase_S.png"/>
+  </tile>
+  <tile id="59">
+   <image width="256" height="512" source="farm/woodWallDoorClosed_W.png"/>
+  </tile>
+ </tileset>
+ <layer id="1" name="terrain" width="8" height="8">
+  <data encoding="csv">
+61,63,62,60,63,60,61,62,
+63,60,47,36,36,48,60,63,
+37,36,46,62,62,35,62,63,
+60,60,62,61,62,35,62,60,
+61,63,63,0,63,35,61,61,
+63,60,0,0,0,45,36,40,
+61,62,62,0,60,63,60,62,
+62,63,61,63,61,62,62,61
+</data>
+ </layer>
+ <layer id="4" name="stones" width="8" height="8">
+  <data encoding="csv">
+0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,
+0,0,0,32,0,0,0,0,
+0,0,30,29,25,0,0,0,
+0,0,0,27,0,0,0,0,
+0,0,0,0,0,0,0,0
+</data>
+ </layer>
+ <layer id="2" name="trees" width="8" height="8">
+  <data encoding="csv">
+0,0,0,0,0,0,15,0,
+0,0,0,0,0,0,14,0,
+0,0,0,6,0,0,0,0,
+0,24,0,0,0,0,0,0,
+0,0,0,0,0,0,5,0,
+0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0
+</data>
+ </layer>
+</map>

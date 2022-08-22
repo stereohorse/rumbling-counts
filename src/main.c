@@ -7,6 +7,12 @@
 
 #include <screens.h>
 
+#define DISP_W 1920
+#define DISP_H 1080
+
+#define BUFFER_W 800
+#define BUFFER_H 600
+
 void must_init(bool test, const char *description) {
   if (test) {
     return;
@@ -27,14 +33,18 @@ int main() {
   ALLEGRO_EVENT_QUEUE *queue = al_create_event_queue();
   must_init(queue, "queue");
 
-  ALLEGRO_DISPLAY *disp = al_create_display(1920, 1080);
+  ALLEGRO_DISPLAY *disp = al_create_display(DISP_W, DISP_H);
   must_init(disp, "display");
+
+  ALLEGRO_BITMAP *buffer = al_create_bitmap(BUFFER_W, BUFFER_H);
+  must_init(buffer, "buffer");
 
   al_register_event_source(queue, al_get_keyboard_event_source());
   al_register_event_source(queue, al_get_display_event_source(disp));
   al_register_event_source(queue, al_get_timer_event_source(timer));
 
-  draw_screen_fn* draw_screen = &draw_game_screen;
+  draw_screen_fn *draw_screen = &draw_game_screen;
+  load_data_game_screen();
 
   bool done = false;
   bool redraw = true;
@@ -59,15 +69,22 @@ int main() {
     }
 
     if (redraw && al_is_event_queue_empty(queue)) {
+      al_set_target_bitmap(buffer);
+
       al_clear_to_color(al_map_rgb(0, 0, 0));
-      al_flip_display();
-      
+
       draw_screen();
+
+      al_set_target_backbuffer(disp);
+      al_draw_scaled_bitmap(buffer, 0, 0, BUFFER_W, BUFFER_H, 0, 0, DISP_W, DISP_H, 0);
+
+      al_flip_display();
 
       redraw = false;
     }
   }
 
+  al_destroy_bitmap(buffer);
   al_destroy_display(disp);
   al_destroy_timer(timer);
   al_destroy_event_queue(queue);
