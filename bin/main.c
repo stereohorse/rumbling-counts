@@ -69,7 +69,8 @@ int main() {
       al_clear_to_color(al_map_rgb(0, 0, 0));
 
       al_set_target_backbuffer(disp);
-      al_draw_scaled_bitmap(buffer, 0, 0, BUFFER_W, BUFFER_H, 0, 0, DISP_W, DISP_H, 0);
+      al_draw_scaled_bitmap(buffer, 0, 0, BUFFER_W, BUFFER_H, 0, 0, DISP_W,
+                            DISP_H, 0);
 
       al_flip_display();
 

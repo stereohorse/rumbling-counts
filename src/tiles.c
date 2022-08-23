@@ -2,6 +2,4 @@
 
 #include <tiles.h>
 
-Tilemap* tiles_load_map(char* path) {
-    return NULL;
-}
+Tilemap *tiles_load_map(char *path) { return NULL; }
