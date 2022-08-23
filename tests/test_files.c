@@ -6,6 +6,8 @@
 #include "test.h"
 #include "test_files.h"
 
+int test_files_init(void) { return files_init(); }
+
 int should_return_null_if_file_not_exists(void) {
   test_start(__func__);
 

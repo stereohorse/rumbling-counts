@@ -4,12 +4,15 @@
 
 #include "files.h"
 
+int files_init(void) {
+  al_set_standard_file_interface();
+  return 0;
+}
+
 char *files_read_all(const char *path) {
   if (path == NULL) {
     return NULL;
   }
-
-  al_set_standard_file_interface();
 
   ALLEGRO_FILE *fp = al_fopen(path, "r");
   if (fp == NULL) {
