@@ -5,8 +5,6 @@
 #include <allegro5/allegro_image.h>
 #include <allegro5/allegro_primitives.h>
 
-#include <screens.h>
-
 #define DISP_W 1920
 #define DISP_H 1080
 
@@ -43,9 +41,6 @@ int main() {
   al_register_event_source(queue, al_get_display_event_source(disp));
   al_register_event_source(queue, al_get_timer_event_source(timer));
 
-  draw_screen_fn *draw_screen = &draw_game_screen;
-  load_data_game_screen();
-
   bool done = false;
   bool redraw = true;
   ALLEGRO_EVENT event;
@@ -72,8 +67,6 @@ int main() {
       al_set_target_bitmap(buffer);
 
       al_clear_to_color(al_map_rgb(0, 0, 0));
-
-      draw_screen();
 
       al_set_target_backbuffer(disp);
       al_draw_scaled_bitmap(buffer, 0, 0, BUFFER_W, BUFFER_H, 0, 0, DISP_W, DISP_H, 0);

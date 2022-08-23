@@ -43,16 +43,26 @@ file(COPY ${allegro5_SOURCE_DIR}/addons/primitives/allegro5/allegro_primitives.h
 )
 
 # -- Executable
-
-FILE(GLOB_RECURSE APP_SOURCES src/*.c)
+FILE(GLOB_RECURSE APP_SOURCES src/*.c bin/main.c)
 add_executable(RumblingCounts ${APP_SOURCES})
 target_include_directories(RumblingCounts PUBLIC ${allegro5_SOURCE_DIR}/include)
 target_include_directories(RumblingCounts PUBLIC ${allegro5_BINARY_DIR}/include)
-target_include_directories(RumblingCounts PRIVATE src include)
+target_include_directories(RumblingCounts PRIVATE src)
 target_link_libraries(
         RumblingCounts 
         LINK_PUBLIC 
         allegro allegro_main allegro_font allegro_primitives allegro_image
     )
 
-message("INCLUDE=${allegro5_SOURCE_DIR}")
+
+# -- Tests
+FILE(GLOB_RECURSE TEST_SOURCES src/*.c tests/*.c bin/test.c)
+add_executable(RunTests ${TEST_SOURCES})
+target_include_directories(RunTests PUBLIC ${allegro5_SOURCE_DIR}/include)
+target_include_directories(RunTests PUBLIC ${allegro5_BINARY_DIR}/include)
+target_include_directories(RunTests PRIVATE src tests)
+target_link_libraries(
+        RunTests 
+        LINK_PUBLIC 
+        allegro allegro_main allegro_font allegro_primitives allegro_image
+    )
