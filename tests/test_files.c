@@ -1,3 +1,4 @@
+#include <allegro5/allegro5.h>
 #include <stdio.h>
 #include <string.h>
 
@@ -23,9 +24,14 @@ int should_return_single_char_file(void) {
   test_start(__func__);
 
   char *result = files_read_all("tests/data/single-char.txt");
-  if (result != NULL && !strcmp("f", result)) {
-    return test_success();
+  if (result == NULL) {
+    return test_fail_msg("file not found");
   }
 
-  return test_fail();
+  if (strcmp("f\n", result)) {
+    al_free(result);
+    return test_fail_msg("unexpected char");
+  }
+
+  return test_success();
 }

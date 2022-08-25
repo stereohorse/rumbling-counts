@@ -66,3 +66,5 @@ target_link_libraries(
         LINK_PUBLIC 
         allegro allegro_main allegro_font allegro_primitives allegro_image
     )
+
+file(COPY tests/data DESTINATION tests)

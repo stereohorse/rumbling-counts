@@ -5,7 +5,7 @@
 
 void must(int return_code, const char *description) {
   if (return_code) {
-    fprintf(stderr, "Unable to init test for%s", description);
+    fprintf(stderr, "Unable to init test for %s", description);
     exit(0);
   }
 }
